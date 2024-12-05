@@ -1,0 +1,138 @@
+/* General Styles */
+body, h1, form, button, p {
+    margin: 1px0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Search Form Styling */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation on hover and click */
+}
+
+form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+form button:active {
+    transform: scale(0.95); /* Shrink the button slightly on click */
+}
+
+/* Book List Styling */
+#book-list {
+    color: #1ba5af;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(490px, 110fr));
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.book-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; /* Fade-in effect for book items */
+}
+
+.book-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.book-item p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Pagination Controls */
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#pagination-controls button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation on hover and click */
+}
+
+#pagination-controls button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+#pagination-controls button:active {
+    transform: scale(0.95); /* Shrink the button slightly on click */
+}
+
+#pagination-controls span {
+    font-size: 1rem;
+    margin: 0 10px;
+}
+
+/* Fade-in Animation for Book Items */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
